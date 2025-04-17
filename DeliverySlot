@@ -1,0 +1,59 @@
+# LogisticsAutomation-G3
+package com.logisticsautomationg3.scheduling.model;
+
+import java.time.LocalDateTime;
+
+public class DeliverySlot {
+    private String slotId;
+    private LocalDateTime startTime;
+    private LocalDateTime endTime;
+    private String assignedOrderId;  // Links to Shipment class
+    private String driverId;        // Links to Driver class
+    private boolean isBooked;
+
+    // Constructor
+    public DeliverySlot(String slotId, LocalDateTime startTime, LocalDateTime endTime) {
+        this.slotId = slotId;
+        this.startTime = startTime;
+        this.endTime = endTime;
+        this.isBooked = false;
+    }
+
+    // Getters
+    public String getSlotId() {
+        return slotId;
+    }
+
+    public LocalDateTime getStartTime() {
+        return startTime;
+    }
+
+    public LocalDateTime getEndTime() {
+        return endTime;
+    }
+
+    public String getAssignedOrderId() {
+        return assignedOrderId;
+    }
+
+    public String getDriverId() {
+        return driverId;
+    }
+
+    public boolean isBooked() {
+        return isBooked;
+    }
+
+    // Setters
+    public void setAssignedOrderId(String assignedOrderId) {
+        this.assignedOrderId = assignedOrderId;
+    }
+
+    public void setDriverId(String driverId) {
+        this.driverId = driverId;
+    }
+
+    public void setBooked(boolean booked) {
+        isBooked = booked;
+    }
+}
