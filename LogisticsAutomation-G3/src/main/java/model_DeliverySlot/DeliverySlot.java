@@ -1,4 +1,4 @@
-package model_DeliverySlot;  // Fixed package name
+package model_DeliverySlot;  //  package name
 
 import java.time.LocalDateTime;  // Added import
 
