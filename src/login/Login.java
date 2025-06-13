@@ -1,6 +1,8 @@
 package login;
 
 import javax.swing.JFrame;
+import java.swing.JOptionPane;
+import javaswingapplication.g3.LoginHandler;
 
 public class Login extends JFrame {
     public Login() {
@@ -214,8 +216,16 @@ public class Login extends JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         String username = txtUsername.getText().trim();
+        String password = new String(txtPassword.getPassword());
+        
         LoginHandler handler = new LoginHandler();
-        if (handler.authenticate(txtUsername.getText(), new String(txtPassword.getPassword()))){
+        if (handler.authenticate(username, password)){
+            dashbordUI dashboard = new LoginHandler();
+            dashboard.setVisible(true);
+            this.dispose();
+        }else{
+            JOptionPane.showMessageDialog(this, "Invalid username or password");
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
