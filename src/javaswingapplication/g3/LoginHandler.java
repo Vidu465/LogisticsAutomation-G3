@@ -10,7 +10,7 @@ import java.sql.ResultSet;
 
 public class LoginHandler {
      public boolean authenticate(String username, String password) {
-        String query = "SELECT * FROM users WHERE username = ? AND password = ?";
+        String query = "SELECT * FROM users WHERE username = ? AND password = SHA2 (?, 256)";
 
         try (Connection conn = DBConnection.getConnection();
              PreparedStatement stmt = conn.prepareStatement(query)) {

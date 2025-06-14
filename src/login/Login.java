@@ -5,6 +5,7 @@ import java.swing.JOptionPane;
 import javaswingapplication.g3.LoginHandler;
 
 public class Login extends JFrame {
+    
     public Login() {
         initComponents();
     }
@@ -198,6 +199,7 @@ public class Login extends JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        new SignupForm().setVisible(true);
         
         SignUp SignUpFrame = new SignUp();
         SignUpFrame.setVisible(true);

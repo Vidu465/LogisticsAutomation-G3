@@ -2,7 +2,8 @@
 package login;
 
 import login.Login;
-
+import javaswingapplication.g3.UserHandler;
+import java.swing.JOptionPane;
 
 public class SignUp extends javax.swing.JFrame {
 
@@ -114,6 +115,11 @@ public class SignUp extends javax.swing.JFrame {
         jButton1.setBackground(new java.awt.Color(0, 102, 102));
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Sign Up");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setForeground(new java.awt.Color(255, 51, 51));
         jButton2.setText("Login");
@@ -204,6 +210,14 @@ public class SignUp extends javax.swing.JFrame {
         LoginFrame.setLocationRelativeTo(null); 
         this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        String fullname = jTextField1.getText().trim();
+        Srting email = jTextFiield2.getText().trim();
+        String password = new String(jPasswordField1.getPassword());
+        
+        if (email.isEmpty() || password.isEmpty())
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
